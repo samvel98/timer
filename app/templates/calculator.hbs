@@ -1,0 +1,13 @@
+<div class="jumbo">
+  <div class="divs" >
+  <input type="text" value="{{val}}" disabled="true">
+    <ul>
+    {{#each zang as |item|}}
+      <li {{action "calc" item}}>{{item}}</li>
+    {{/each}}
+    </ul>
+  </div>
+</div>
+
+
+{{outlet}}
