@@ -1,7 +1,6 @@
 export default function() {
 this.passthrough('https://api.mapbox.com/**');
   this.namespace = '/api';
-
  let rentals = [{
         type: 'rentals',
         id: 'grand-old-mansion',
@@ -14,7 +13,7 @@ this.passthrough('https://api.mapbox.com/**');
           image: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg',
           description: "This grand old mansion sits on over 100 acres of rolling hills and dense redwood forests."
         }
-      }, 
+      },
       {
         type: 'rentals',
         id: 'urban-living',
@@ -27,7 +26,7 @@ this.passthrough('https://api.mapbox.com/**');
           image: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Alfonso_13_Highrise_Tegucigalpa.jpg',
           description: "A commuters dream. This rental is within walking distance of 2 bus stops and the Metro."
         }
-      }, 
+      },
       {
         type: 'rentals',
         id: 'treptowers',
@@ -40,7 +39,7 @@ this.passthrough('https://api.mapbox.com/**');
           image: 'https://upload.wikimedia.org/wikipedia/commons/4/47/Treptowers%2C_Alt-Treptow%2C_Berlin%2C_1705252213%2C_ako.jpg',
           description: "The Treptowers are a complex of buildings in the district of Alt-Treptow"
         }
-      }, 
+      },
       {
         type: 'rentals',
         id: 'downtown-charm',
@@ -54,7 +53,7 @@ this.passthrough('https://api.mapbox.com/**');
           description: "Convenience is at your doorstep with this charming downtown rental. Great restaurants and active night life are within a few feet."
         }
       }];
-  
+
   this.get('/rentals', function(db, request) {
     if(request.queryParams.city !== undefined) {
       let filteredRentals = rentals.filter(function(i) {

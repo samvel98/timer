@@ -14,6 +14,11 @@ Router.map(function() {
   });
   this.route('timer');
   this.route('calculator');
+  this.route('new-calculator');
+  this.route('todos', function() {
+    this.route('active');
+    this.route('completed');
+  });
 });
 
 export default Router;

@@ -1,0 +1,20 @@
+<div class="jumbo">
+  {{input type="text"  value=inputValue class="todoInp" keyUp=(action "inputTitle")}}
+  <button class="add-button" {{action "create"}}>ADD</button>
+  <div>
+    {{input type="checkbox" class="checkbox"  click=(action "selectAll")}}
+    <button class="todobtn" {{action "getAll"}}>All</button>
+    <button class="todobtn" {{action "filterByActive"}}>Active</button>
+    <button class="todobtn" {{action "filterByCompleted"}} >Completed</button>
+    <button class="todobtn" {{action "deletSelecteds"}} >Delete</button>
+  </div>
+  <ul>
+    {{#each titles as |list|}}
+      {{#if list.completed}}
+        <li><div role="button" class="complet" {{action "completItem" list}}>{{list.title}}</div> <span role="button" {{action "delete" list bubbles=false}}>X</span></li>
+      {{else}}
+        <li><div role="button" class="activeList" {{action "completItem" list}}> {{list.title}}</div><span role="button" {{action "delete" list bubbles=false}}>X</span></li>
+      {{/if}}
+    {{/each}}
+  </ul>
+</div>

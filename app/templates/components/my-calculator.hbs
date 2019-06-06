@@ -1,0 +1,13 @@
+<div class="jumbo">
+  <div class="divs" role="button"  {{action "keys" on="keyDown"}}>
+    {{input value=inputVal disabled="true"}}
+    <span class="operator">{{operator}}</span>
+  </div>
+  <div>
+    <ul class="divs">
+      {{#each calcButtons as |calcButton|}}
+        <li role="button" class={{calcButton.buttonClass}}  {{action "active"}}> {{calcButton.value}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

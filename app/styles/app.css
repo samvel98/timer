@@ -4,7 +4,9 @@
   width: 40px;
   height: 40px;
 }
-
+li{
+  list-style: none;
+}
 .btn-danger{
   height: 40px;
   width: 100px;
@@ -35,6 +37,14 @@
   margin: 5px;
    border-collapse: collapse;
 }
+
+.add-button {
+  background: green;
+  width: 70px;
+  height: 35px;
+  border-radius: 5px;
+}
+
 .divs li{
   display: inline-block;
   width: 60px;
@@ -46,4 +56,111 @@
   padding: 0;
   background: silver;
   cursor: pointer;
+}
+
+.divs li.active {
+  background: red;
+}
+
+.operator {
+  position: absolute;
+  transform: translateX(-15px);
+  color: #929292;
+}
+.todoInp{
+  width: 400px;
+  height: 30px;
+  padding: 0 10px 0 10px;
+  margin-bottom: 10px;
+  border: 1px solid #929292;
+}
+.activeList {
+  list-style: none;
+  height: 30px;
+  width: 400px;
+  border-bottom:  1px solid #929292;
+  line-height: 30px;
+  padding: 10px;
+  margin: 0;
+  background: #dcdada;
+  cursor: pointer;
+}
+
+.activeList + span, .complet + span {
+  float: right;
+  position: absolute;
+  transform: translate(370px,-102%);
+  /*border: 0;*/
+  height: 50px;
+  /*transform: translate(10px,-10px);*/
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+}
+.activeList + span:hover, .complet + span:hover {
+  background: #e46855;
+}
+.complet{
+  text-decoration: line-through;
+  list-style: none;
+  height: 30px;
+  width: 400px;
+  border-bottom:  1px solid #929292;
+  line-height: 30px;
+  padding: 10px;
+  margin: 0;
+  background: #dcdada;
+  cursor: pointer;
+  color: #9e9c9c;
+}
+.todobtn{
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100px;
+  height: 40px;
+  border: 0;
+  cursor: pointer;
+}
+
+.select-all{
+  width: 40px;
+  height: 40px;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.checkbox[type="checkbox"]
+{
+  position: relative;
+  top: 15px;
+  width: 40px;
+  height: 40px;
+  -webkit-appearance:none;
+  outline: none;
+  transition: .5s;
+  /*border: 4px solid #262626*/;
+
+}
+
+.checkbox[type="checkbox"]:before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #dcdada;
+  box-sizing: border-box;
+  transition: .5s;
+}
+.checkbox:checked[type="checkbox"]:before
+{
+  border-top: none;
+  border-left: none;
+  width: 25px;
+  border-color: #dcdada;
+  transform: rotate(45deg);
 }

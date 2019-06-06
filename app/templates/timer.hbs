@@ -1,23 +1,12 @@
-
 <div class="jumbo">
   <div class="right tomster"></div>
   <h2>Stopwatch</h2>
-
   <div class="block">
-    <input type="button" disabled="true" value="{{h}}" name="" id="hour">
-    <input type="button" disabled="true" value="{{m}}" name="" id="minutes">
-    <input type="button" disabled="true" value="{{s}}" name="" id="seconds">
-    <input type="button" disabled="true" value="{{ms}}" name="" id="miliseconds">
+    {{input type="button" disabled="true" value=h}}
+    {{input type="button" disabled="true" value=m}}
+    {{input type="button" disabled="true" value=s}}
+    {{input type="button" disabled="true" value=ms}}
   </div>
-
-  <button  id="start" class="{{class}}" value="false" {{action "start"}}>{{start}}</button>
-
-
+  {{input type="button" class=class click=(action "start") value=start}}
 </div>
-
-
-
-
-
-
 {{outlet}}
