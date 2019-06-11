@@ -8,14 +8,13 @@ export default Controller.extend({
   h: 0,
   start: 'start',
   interval: null,
-  class:'btn-primary',
+  class:'continue',
 
   actions: {
-
     start() {
       if(this.start == 'start' || this.start == 'continue') {
         this.set('start','pause');
-        this.set('class','btn-danger');
+        this.set('class','pause');
         this.interval = setInterval(() => {
           this.set('ms', this.ms + 1);
           if(this.ms>99){
@@ -35,7 +34,7 @@ export default Controller.extend({
       else {
         clearInterval(this.interval);
         this.set('start','continue');
-        this.set('class','btn-primary');
+        this.set('class','continue');
       }
     }
   },

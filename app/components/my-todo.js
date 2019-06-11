@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import { computed, set, } from '@ember/object';
+import { computed, set } from '@ember/object';
 import { run } from '@ember/runloop';
 import $ from 'jquery';
 
@@ -28,6 +28,7 @@ export default Component.extend({
 
   actions: {
     create() {
+      // console.log(this.inputValue);
       let data = {
         title: this.inputValue,
         completed: 0,

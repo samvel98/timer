@@ -19,6 +19,7 @@ Router.map(function() {
     this.route('active');
     this.route('completed');
   });
+  this.route('game');
 });
 
 export default Router;

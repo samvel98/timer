@@ -1,0 +1,20 @@
+<div class="players">
+  <h1>online now: {{socketService.onlines}}</h1>
+  <div>Player 1: {{socketService.player1}}</div>
+  <div>Player 2: {{socketService.player2}}</div>
+</div>
+<div class="board">
+{{!--
+  <form {{action "setNewValuesWithKeyPress" on="submit"}}>
+    {{input maxlength="6" value=colorCode placeholder="Color"}}
+    {{input type="number" max="951" min="0"  value=X placeholder="X "}}
+    {{input type="number" max="351" min="0"  value=Y placeholder="Y "}}
+    <button {{action "setNewValues"}}>Set values</button>
+  </form> --}}
+
+  {{#if start}}
+    {{my-game/ball}}
+  {{else}}
+    <button {{action  'startGame'}} class="startGame" > Start </button>
+  {{/if}}
+</div>

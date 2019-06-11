@@ -1,6 +1,6 @@
 <div class="jumbo">
   {{input type="text"  value=inputValue class="todoInp" keyUp=(action "inputTitle")}}
-  <button class="add-button" {{action "create"}}>ADD</button>
+  <button {{action "create"}} class="add-button">ADD</button>
   <div>
     {{input type="checkbox" class="checkbox"  click=(action "selectAll")}}
     <button class="todobtn" {{action "getAll"}}>All</button>
